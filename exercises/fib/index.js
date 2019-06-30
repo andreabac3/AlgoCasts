@@ -9,13 +9,12 @@
 //   fib(4) === 3
 
 function fib(n) {
-	if (n <= 0){
+	if (0 >= n)
 		return 0;
-	}else if (n == 1 || n == 2){
+	else if (1 == n || 2 == n)
 		return 1;
-	}
-	let i = 0; //   0 1 1 2
-	let result = 1; // 1 1 2 3
+	let i = 0;
+	let result = 1;
 	let tmp = 0;
 	while (n > 1){
 		tmp = result;
