@@ -15,5 +15,5 @@ function maxChar(str) {
   }
   return Object.keys(dict).reduce((a, b) => dict[a] > dict[b] ? a : b);
 }
-console.log(maxChar("abcccccccd"));
+
 module.exports = maxChar;
