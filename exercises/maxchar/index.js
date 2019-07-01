@@ -7,13 +7,13 @@
 
 function maxChar(str) {
 	let dict = {};
-  for (let i = 0; i < str.length ; i++){
-  	if (dict[str[i]] == undefined){
-  		dict[str[i]] = 0;
-  	}
-  	dict[str[i]] += 1;
-  }
-  return Object.keys(dict).reduce((a, b) => dict[a] > dict[b] ? a : b);
+	for (let i = 0; i < str.length ; i++){
+		if (dict[str[i]] == undefined){
+			dict[str[i]] = 0;
+		}
+		dict[str[i]] += 1;
+	}
+	return Object.keys(dict).reduce((a, b) => dict[a] > dict[b] ? a : b);
 }
 
 module.exports = maxChar;
