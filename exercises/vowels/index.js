@@ -8,7 +8,7 @@
 //   vowels('Why?') --> 0
 
 
-// NB many overheads, a solution to practice with the Reduce function
+// N.B. many overheads, a solution to practice with the Reduce function
 
 function countVolwels(cnt, char){
   const volwels = "aeiou";
