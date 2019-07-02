@@ -35,5 +35,5 @@ function steps(n) {
 		console.log(string.join(''));
 	}
 }
-steps(4);
+
 module.exports = steps;
