@@ -7,6 +7,20 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+
+ 
+// NB many overheads, solution to practice with the Reduce function
+
+function countVolwels(cnt, char){
+  const volwels = "aeiou";
+    if (volwels.includes(char)){
+      cnt+=1;
+  }
+  return cnt;
+}
+
+function vowels(str) {
+	return str.toLowerCase().split("").reduce(countVolwels, 0);
+}
 
 module.exports = vowels;
