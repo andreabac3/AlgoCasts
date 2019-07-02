@@ -8,6 +8,31 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+function charDictionary(string){
+	let dict = {};
+	for (let char of string){
+		dict[char] = dict[char] + 1 || 1;
+	}
+	return dict;
+}
 
+function anagrams(stringA, stringB) {
+	stringA = stringA.toLowerCase().replace(/[^\w\s]|_/g, "");
+	stringB = stringB.toLowerCase().replace(/[^\w\s]|_/g, "");
+	let setA = charDictionary(stringA);
+	let setB = charDictionary(stringB);
+	let charA = Object.keys(setA);
+	let charB = Object.keys(setB);
+	// check if the strings don't have the same char.
+	if (charA.length !== charB.length){
+		return false;
+	}
+	// the strings have the same char, count the char occurrences in each string.
+	for(let char of charA){
+		if (setA[char] !== setB[char]){
+			return false;
+		}
+	}
+	return true;
+}
 module.exports = anagrams;
